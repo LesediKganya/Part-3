@@ -1,0 +1,417 @@
+body {
+    background-image: radial-gradient(circle at center center, rgb(215, 105, 155),rgb(187, 82, 146),rgb(158, 59, 136),rgb(130, 35, 127),rgb(101, 12, 117));
+    color: black;
+}
+
+/* General styles for the unordered list */
+ul {
+    padding: 15px;
+    border: 1px solid white;
+    font-family: "Chivo Mono", monospace; /* Ensure font name is correctly capitalized */
+    display: flex;
+    gap: 90px; /* Consider using a responsive unit like 'rem' or '%' for better responsiveness */
+}
+
+/* Remove default list styling */
+ul li {
+    list-style-type: none;
+}
+
+/* Styles for links within the list items */
+ul li a {
+    font-size: 26px;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 20px;
+    transition: color 0.5s ease; /* Specify the property for transition */
+}
+
+/* Change border color on hover */
+ul:hover {
+    border: 3px solid #f46b30;
+}
+
+/* Change link color and add animation on hover */
+ul:hover li a {
+    color: #f46b30;
+    animation: glowing 1s ease-in-out infinite alternate; /* Added duration for animation */
+}
+
+/* Change color and opacity of non-hovered links */
+ul:hover li a:not(:hover) {
+    color: white;
+    opacity: 0.3;
+    filter: blur(1px);
+}
+
+/* Define the glowing animation */
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #f46b30, 0 0 10px #f46b30, 0 0 15px #f46b30; }
+    100% { text-shadow: 0 0 10px #f46b30, 0 0 20px #f46b30, 0 0 30px #f46b30; }
+}
+
+
+/* Fixed footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding included in width */
+    z-index: 1000; /* Make sure footer stays above other content */
+}
+
+/* Footer container with specific height */
+.footer-set {
+    height: 100px;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+}
+
+/* Wrapper inside footer for flexible layout */
+.footer-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 95%;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 600px) {
+    footer {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+    .footer-set {
+        height: auto; /* Let height adjust on small screens */
+        padding: 10px 0;
+    }
+    .footer-wrap {
+        flex-direction: column;
+        align-items: center;
+        min-height: auto;
+    }
+}
+
+/* Container for the price list */
+.price-list-container {
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 12px; /* Add padding */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for depth */
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #f5f5f5; /* Light background on hover */
+}
+
+/* Enrollment information section */
+.enrollment-info {
+    margin: 20px 0; /* Vertical spacing */
+    padding: 15px; /* Inner padding */
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Price section styling */
+.price-section {
+    margin: 30px 0; /* Vertical spacing */
+}
+
+/* Heading for price section */
+.price-section h3 {
+    color: #2c3e50; /* Dark color for text */
+    margin-bottom: 20px; /* Space below the heading */
+    text-decoration: underline; /* Underline the heading */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .price-list-container {
+        padding: 8px; /* Reduce padding on smaller screens */
+    }
+
+    .enrollment-info {
+        margin: 15px 0; /* Adjust margin for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .price-section {
+        margin: 20px 0; /* Adjust margin for smaller screens */
+    }
+
+    .price-section h3 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}
+h1 {
+    color: whitesmoke;
+    font-size: larger;
+    text-align: center;
+}
+
+/* Main container for content */
+.container {
+    max-width: 800px; /* Limit the maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Inner padding */
+}
+
+/* Flexbox layout for image and text */
+.image-right-text-left {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between image and text */
+    margin-top: 20px; /* Space above the section */
+}
+
+/* Image container */
+.float-right {
+    flex: 0 0 200px; /* Fixed width for the image */
+    margin-left: 20px; /* Space between text and image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Text content area */
+.text-content {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+/* Heading styles */
+.text-content h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    color: #2c3e50; /* Dark color for the heading */
+}
+
+/* Paragraph styles */
+.text-content p {
+    text-align: justify; /* Justify text for better readability */
+    line-height: 1.6; /* Line height for readability */
+    color: #34495e; /* Slightly lighter color for text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-right-text-left {
+        flex-direction: column; /* Stack image and text on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .float-right {
+        flex: none; /* Reset flex properties */
+        width: 100%; /* Make image full width */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Add space below the image */
+    }
+
+    .text-content {
+        text-align: center; /* Center text on smaller screens */
+    }
+}
+
+ h1{
+    text-align: center;
+    color: whitesmoke;
+    background-image: radial-gradient(circle at top center, rgb(243, 177, 46),rgb(230, 153, 36),rgb(217, 129, 26),rgb(204, 104, 15),rgb(191, 80, 5));
+ }  
+
+/* Heading styling */
+h2 {
+    color: #2c3e50; /* Dark color for the heading */
+    text-align: center; /* Center the heading */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+/* Label styling */
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below the label */
+    color: #34495e; /* Darker color for labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+/* Input and select styling */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the input fields */
+    border: 1px solid #bdc3c7; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Textarea specific styling */
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Minimum height for the textarea */
+}
+
+/* Checkbox group styling */
+.checkbox-group {
+    margin-bottom: 20px; /* Space below the checkbox group */
+}
+
+/* Checkbox label styling */
+.checkbox-group label {
+    display: inline-block; /* Inline display for checkbox labels */
+    margin-left: 5px; /* Space to the left of the label */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the button */
+    background-color: #3498db; /* Primary button color */
+    color: white; /* Text color should be white for contrast */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+/* Required field indicator */
+.required::after {
+    content: "*"; /* Asterisk for required fields */
+    color: red; /* Red color for the asterisk */
+    margin-left: 4px; /* Space to the left of the asterisk */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Adjust font size for smaller screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea,
+    input[type="submit"] {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    /* Adjust padding for smaller screens */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea,
+    input[type="submit"] {
+        padding: 8px; /* Reduce padding */
+    }
+}
+/* Social Media Section */
+.social-media {
+    text-align: center; /* Center text */
+    padding: 30px 0; /* Vertical padding */
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(250, 170, 211), rgb(80, 78, 169)); /* Background gradient */
+    margin-top: 20px; /* Space above the section */
+}
+
+.social-media h3 {
+    color: #2c3e50; /* Heading color */
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5em; /* Font size for heading */
+}
+
+.social-media a {
+    color: yellow; /* Link color */
+    font-size: 24px; /* Font size for links */
+    margin: 0 15px; /* Horizontal margin */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.social-media a:hover {
+    color: rgb(112, 194, 18); /* Color change on hover */
+}
+
+/* Business Hours Section */
+.business-hours {
+    text-align: center; /* Center text */
+    padding: 20px 0; /* Vertical padding */
+    background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, rgb(250, 170, 211), rgb(80, 78, 169)); /* Background gradient */
+    margin-top: 20px; /* Space above the section */
+}
+
+.business-hours p {
+    color: yellowgreen; /* Text color */
+    line-height: 1.6; /* Line height for readability */
+    margin: 5px 0; /* Vertical margin */
+}
+
+/* Image Container */
+.image-container {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    height: auto; /* Automatic height */
+    overflow: hidden; /* Hide overflow */
+    margin: 20px auto; /* Center the container */
+}
+
+/* Image styling */
+img {
+    display: block; /* Block display for images */
+    margin: 0 auto 10px; /* Center image and add bottom margin */
+    max-width: 100%; /* Responsive width */
+    height: auto; /* Maintain aspect ratio */
+    filter: drop-shadow(1px 1px 20px blue); /* Drop shadow effect */
+}
+
+/* Heading and paragraph styling */
+h1, h2, h3, li, p {
+    font-weight: bold; /* Bold text for headings and paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-media a {
+        font-size: 20px; /* Smaller font size for links on smaller screens */
+        margin: 0 10px; /* Reduce margin for links */
+    }
+
+    .business-hours p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+    }
+
+    img {
+        max-width: 90%; /* Allow images to take up more width on smaller screens */
+    }
+}
+ @media screen and (min-width: 240px) {
+    ul{
+        width: 100%;
+    }
+    ul li {
+        width: 100%;
+    }
+    ul li a {
+        width: 100%;
+    }
+    footer{ 
+        width: 100%;
+    }
+ }
